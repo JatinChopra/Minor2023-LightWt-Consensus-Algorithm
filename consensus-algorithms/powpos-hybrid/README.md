@@ -1,7 +1,5 @@
 # Proof of Work/Proof of Stake Hybrid (PoW/Pos Hybrid) Algorithm
 
-This Markdown file explains the code implementation of a Proof of Work/Proof of Stake Hybrid (PoW/Pos Hybrid) algorithm in Java.
-
 ## Overview
 
 The PoW/Pos Hybrid algorithm combines aspects of both Proof of Work (PoW) and Proof of Stake (PoS) to achieve consensus in a blockchain network. Validators are selected based on PoS principles, but the mining process involves PoW-style competition.
