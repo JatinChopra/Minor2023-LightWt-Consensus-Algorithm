@@ -18,7 +18,7 @@ The code is organized into the following sections:
 
 - **Mining Function**: The `mine` function demonstrates the mining process. It repeatedly calculates a hash and checks if it meets the target prefix, indicating a valid solution.
 
-## Executiont
+## Execution
 
 The code demonstrates the following steps:
 
