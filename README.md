@@ -31,6 +31,4 @@ This project has implemented and studied the following consensus algorithms:
 - [**Proof of Work and Proof of Stake Hybrid**](consensus-algorithms/powpos-hybrid)
 
 
-## Comparison
 
-A comprehensive comparison between the newly developed lightweight consensus algorithm and existing algorithms will be presented here. The comparison will focus on factors like performance, security, energy efficiency, and scalability.
