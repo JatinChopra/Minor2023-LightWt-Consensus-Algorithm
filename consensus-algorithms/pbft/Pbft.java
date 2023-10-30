@@ -9,7 +9,7 @@ class PBFTNode {
   public int totalCommitMessagesReceived;
   private int preprepareMessages = 0;
   private PBFTMessage message;
-  private int totalNodes = 10;
+  private int totalNodes = 5;
 
   public PBFTNode(String name) {
     this.name = name;
@@ -92,11 +92,11 @@ class PBFTNode {
     } else if (message.getPhase().equals("commit")) {
       // commitMessagesReceivedFrom.add(message);
       totalCommitMessagesReceived++;
-      if (name.equals("N1") && totalCommitMessagesReceived > totalNodes / 2) { // check if the commit message increment is being done on primary nodes
+      if (name.equals("N1") && totalCommitMessagesReceived > (int)((double)totalNodes *  2.0/3.0)) { // check if the commit message increment is being done on primary nodes
         System.out.println(
           "[+] " +
           name +
-          " received commit message from more than half of nodes therefore."
+          " received commit message from more than 2/3(rd) of nodes therefore."
         );
         System.out.println("Transaction has been committed!");
         System.exit(0);
@@ -140,7 +140,7 @@ class PBFTMessage {
 public class Pbft {
 
   public static void main(String[] args) {
-    int totalNodes = 10; // set the total number of nodes
+    int totalNodes = 5; // set the total number of nodes
     List<PBFTNode> nodes = new ArrayList<>(); // create an array list for storing PBFTnodes
 
     // fill the arraylist with PBFTNode's
